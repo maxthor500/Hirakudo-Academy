@@ -93,3 +93,36 @@ a:hover {
 #check:checked~ul {
     left: 0;
 }
+
+/* style h1  */
+
+h1 {
+    font-size: 1.5rem;
+    color: #242231;
+}
+
+/* center h1 and button */
+
+.row {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* center hero-image */
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+}
+
+img.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
