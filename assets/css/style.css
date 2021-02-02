@@ -126,3 +126,43 @@ img.hero-image {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+/* style PLAY button and animate from W3Schools */
+
+.btn {
+    position: relative;
+    font-family: "Merienda One", cursive;
+    text-shadow: .1rem .1rem whitesmoke;
+    background-color: #df2c2c;
+    border: none;
+    font-size: 1.2rem;
+    color: #242231;
+    border-radius: 20%;
+    border: .1rem solid #242231;
+    padding: 1rem;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:after {
+    content: "";
+    background: whitesmoke;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
