@@ -225,3 +225,32 @@ img.hero-image {
 .expand {
     width: 15rem;
 }
+
+/* media queries */
+
+@media screen and (min-width: 23.4em) {
+    .navbar-nav {
+        width: 12%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 26.5em) {
+    .navbar-nav {
+        display: 8%;
+    }
+}
+
+@media screen and (min-width: 48.1em) {
+    .navbar-nav {
+        display: none;
+    }
+    .sidebar {
+        display: block;
+    }
+    .active {
+        display: inline-block;
+    }
+}
