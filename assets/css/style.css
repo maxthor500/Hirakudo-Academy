@@ -166,3 +166,62 @@ img.hero-image {
     opacity: 1;
     transition: 0s
 }
+
+/* sidebar from https://www.codingsnow.com/2021/01/responsive-sidebar-menu-dashboard.html */
+
+.sidebar {
+    z-index: 1;
+    top: 0;
+    background: whitesmoke;
+    margin-top: 4rem;
+    padding-top: 1.8rem;
+    position: fixed;
+    left: 0;
+    width: 5rem;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+    display: none;
+}
+
+.sidebar a {
+    color: #242231;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+    line-height: 3.75rem;
+    padding-left: .5rem;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover {
+    background: #df2c2c;
+}
+
+.sidebar i {
+    padding-right: 0.6rem;
+}
+
+#check:checked~.sidebar {
+    left: -11.5rem;
+}
+
+#check:checked~.sidebar a span {
+    display: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#check:checked~.sidebar a {
+    font-size: 1rem;
+    margin-left: 10rem;
+    width: 100%;
+}
+
+.expand {
+    width: 15rem;
+}
