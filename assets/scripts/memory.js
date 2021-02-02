@@ -1,5 +1,5 @@
 /* my array of aikido's techiniques */
-const technique = ['tenkan', 'shihonage', 'ikkyo', 'kotegaeshi', 'sankyo', 'nikkyo', 'iriminage', 'yonkyo', 'kokyunage', 'tenchinage', 'udeminage', 'uchikaiten', 'gokyo', 'jujigarami', 'kaiten'];
+const techniques = ['tenkan', 'shihonage', 'ikkyo', 'kotegaeshi', 'sankyo', 'nikkyo', 'iriminage', 'yonkyo', 'kokyunage', 'tenchinage', 'udeminage', 'uchikaiten', 'gokyo', 'jujigarami', 'kaiten'];
 
 /* generate a random number */
 function randomIndex(arr) {
@@ -22,19 +22,17 @@ function generatorTakeSixArray(arr) {
     return takeSix.concat(takeSix);
 };
 
-const sixTech = generatorTakeSixArray(technique);
-const cardsSelector = document.querySelectorAll(".memory-card");
+const sixTech = generatorTakeSixArray(techniques);
+const cards = document.querySelectorAll(".memory-card");
 
 /* for each memory card insert an insert a front-face and an attribute differente */
 for (let i = 0; i < sixTech.length; i++) {
     let text = '<div class="front-face">' + '<p class="technique">' + sixTech[i] + "</p>" + "</div>" + '<img class="back-face" src="./assets/images/accademia-hirakudo.svg" alt="logo Hirakudo Academy">';
-    cardsSelector[i].innerHTML = text;
-    cardsSelector[i].setAttribute("data-framework", sixTech[i]);
+    cards[i].innerHTML = text;
+    cards[i].setAttribute("data-framework", sixTech[i]);
 }
 
 /* memory game from freeCodeCamp.org youtube channel */
-
-const cards = document.querySelectorAll(".memory-card");
 
 let hasFlippedCard = false;
 let lockBoard = false;
