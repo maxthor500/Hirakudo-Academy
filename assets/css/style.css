@@ -369,3 +369,10 @@ h1.dark-mode {
     height: auto;
     padding: .5rem;
 }
+
+
+/* style map in modal */
+
+div#render-map {
+    min-height: 22.5rem;
+}
