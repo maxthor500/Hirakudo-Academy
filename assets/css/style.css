@@ -94,6 +94,7 @@ a:hover {
     left: 0;
 }
 
+
 /* style h1  */
 
 h1 {
@@ -101,12 +102,14 @@ h1 {
     color: #242231;
 }
 
+
 /* center h1 and button */
 
 .row {
     text-align: center;
     padding: 2rem 0;
 }
+
 
 /* center hero-image */
 
@@ -126,6 +129,7 @@ img.hero-image {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 
 /* style PLAY button and animate from W3Schools */
 
@@ -166,6 +170,7 @@ img.hero-image {
     opacity: 1;
     transition: 0s
 }
+
 
 /* sidebar from https://www.codingsnow.com/2021/01/responsive-sidebar-menu-dashboard.html */
 
@@ -226,6 +231,7 @@ img.hero-image {
     width: 15rem;
 }
 
+
 /* media queries */
 
 @media screen and (min-width: 23.4em) {
@@ -253,4 +259,48 @@ img.hero-image {
     .active {
         display: inline-block;
     }
+}
+
+
+/* element to change dark mode */
+
+body.dark-mode {
+    background-color: #242231;
+}
+
+nav.dark-mode {
+    background-color: #242231;
+}
+
+.nav-item a.dark-mode {
+    color: whitesmoke;
+}
+
+.checkbtn.dark-mode {
+    color: whitesmoke;
+}
+
+.navbar-nav.dark-mode {
+    background: #242231;
+}
+
+.btn.dark-mode {
+    color: whitesmoke;
+    border: .1rem solid whitesmoke;
+}
+
+.btn:after.dark-mode {
+    background: #242231;
+}
+
+.sidebar.dark-mode {
+    background: #242231;
+}
+
+.sidebar a.dark-mode {
+    color: whitesmoke;
+}
+
+h1.dark-mode {
+    color: whitesmoke;
 }
