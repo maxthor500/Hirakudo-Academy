@@ -304,3 +304,68 @@ nav.dark-mode {
 h1.dark-mode {
     color: whitesmoke;
 }
+
+
+/* Style modals from W3Schools */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: whitesmoke;
+    background-color: transparent;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #df2c2c;
+    width: 80%;
+}
+
+.modal-content h2 {
+    font-family: 'Merienda One', cursive;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #242231;
+    float: right;
+    line-height: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #df2c2c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* style image in description modal */
+
+#photo {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    padding: .5rem;
+}
