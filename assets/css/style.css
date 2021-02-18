@@ -371,8 +371,19 @@ h1.dark-mode {
 }
 
 
-/* style map in modal */
+/* style Map */
 
-div#render-map {
-    min-height: 22.5rem;
+#mapid {
+    min-height: 22rem;
+    margin: .8rem;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    color: #242231;
+    position: absolute;
+    display: inline-flex;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem;
 }
