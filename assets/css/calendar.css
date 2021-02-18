@@ -1,0 +1,146 @@
+/* calendar CSS from https://github.com/lashaNoz/Calendar/blob/master/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Roboto&display=swap');
+.container {
+    font-size: 1rem;
+    padding: .5rem;
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    color: #242231;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    width: 20rem;
+    margin-top: 1rem;
+    height: auto;
+    background-color: whitesmoke;
+}
+
+.month {
+    width: 100%;
+    height: 8rem;
+    background-color: #df2c2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 1rem;
+}
+
+.month p {
+    font-size: 1.2rem;
+}
+
+.header-event {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: .6rem;
+}
+
+.weekdays {
+    width: 100%;
+    height: 3rem;
+    padding: 0 .4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays th {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    width: calc(18rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+.days td {
+    font-size: 1rem;
+    margin: 0.3rem;
+    width: calc(14rem / 7);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days td:hover:not(.today) {
+    background-color: whitesmoke;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: .5;
+}
+
+.today {
+    background-color: #df2c2c;
+}
+
+#event {
+    width: 100%;
+    background-color: #df2c2c;
+    color: #242231;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 48em) {
+    .calendar {
+        width: 40rem;
+        margin-top: 2.5rem;
+    }
+    .month {
+        height: 12rem;
+    }
+    .month h1 {
+        font-size: 3rem;
+    }
+    .month p {
+        font-size: 1.6rem;
+    }
+    .weekdays {
+        height: 5rem;
+    }
+    .weekdays th {
+        font-size: 1.5rem;
+        width: calc(40rem / 7);
+    }
+    .days td {
+        font-size: 1.4rem;
+        width: calc(35rem / 7);
+        height: 5rem;
+    }
+}
