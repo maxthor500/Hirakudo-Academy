@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="aikido, games, technique, Hirakudo, Del Plato Liberato" />
+    <meta name="description" content="info page about the Hirakudo Academy with a memory game where to learn the name of technique " />
+    <meta name="author" content="Carmine Pastena" />
+    <title>When does Hirakudo Academy have lesson</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- logo -->
+        <a class="logo" href="index.html"><img id="logo" src="./assets/images/accademia-hirakudo.svg" alt="Hirakudo Logo">
+            <h1>Hirakudo Academy</h1>
+        </a>
+    </header>
+    <main class="container">
+        <section class="calendar">
+            <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">
+                    <h1></h1>
+                    <p></p>
+                </div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="header-event">
+                <h2>Today Class Schedule:</h2>
+            </div>
+            <div id="event">
+
+            </div>
+            <table class="calendar">
+                <thead>
+                    <tr class="weekdays">
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="days"></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="./assets/scripts/calendar.js" defer></script>
+</body>
+
+</html>
