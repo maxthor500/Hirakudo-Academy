@@ -1,37 +1,31 @@
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("render-map"), {
-        zoom: 3,
-        center: {
-            lat: -28.024,
-            lng: 140.887
-        },
-    });
-    // Create an array of alphabetical characters used to label the markers.
-    const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    // Add some markers to the map.
-    // Note: The code uses the JavaScript Array.prototype.map() method to
-    // create an array of markers based on a given "locations" array.
-    // The map() method here has nothing to do with the Google Maps API.
-    const markers = locations.map((location, i) => {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length],
-        });
-    });
-    // Add a marker clusterer to manage the markers.
-    new MarkerClusterer(map, markers, {
-        imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-    });
-}
-const locations = [{
-    lat: -31.56391,
-    lng: 147.154312
-}, {
-    lat: -33.718234,
-    lng: 150.363181
-}, {
-    lat: -33.727111,
-    lng: 150.371124
-}];
+//set my map view
+const map = L.map('mapid').setView([40.623934, 15.021327], 12);
 
-var markerCluster = new MarkerClusterer(map, markers, { imagePath: `${path}/m` });
+//render the map
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+//popup lat and lng with a click on the map
+const popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+
+//set my icon marker
+const myIcon = L.icon({
+    iconUrl: './assets/images/marker.png',
+    iconSize: [50, 80], // size of the icon
+    iconAnchor: [25, 95], // point of the icon which will correspond to marker's location
+    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+//render markers with my icon
+L.marker([40.632761, 15.050083], { icon: myIcon }).addTo(map).bindPopup('Hirakudo Academy');
+L.marker([40.604353, 14.992014], { icon: myIcon }).addTo(map).bindPopup('ASD Tusciania');
