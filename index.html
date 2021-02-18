@@ -9,10 +9,22 @@
     <meta name="description" content="info page about the Hirakudo Academy with a memory game where to learn the name of technique " />
     <meta name="author" content="Carmine Pastena" />
     <title>Hirakudo Academy</title>
+    <!-- fontawesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <!-- load Leaflet JS-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- EmailJS init -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_lgUICfXy7c97VwsOb5u8X');
+        })();
+    </script>
 </head>
 
 <body>
@@ -28,16 +40,16 @@
             <!-- navbar to mobile and tablet mode -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a id="userBtn" href="#"><i class="far fa-user"></i></a>
+                    <a onclick='openModal("description")' href="#"><i class="far fa-user"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a id="mapBtn" href="#"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="map.html"><i class="fas fa-map-marker-alt"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a id="calendarBtn" href="#"><i class="far fa-calendar-alt"></i></a>
+                    <a href="#"><i class="far fa-calendar-alt"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a id="envelopeBtn" href="#"><i class="far fa-envelope"></i></a>
+                    <a onclick='openModal("mail")' href="#"><i class="far fa-envelope"></i></a>
                 </li>
                 <li class="nav-item" id="themeButton">
                     <a href="#" class="themify"><i class="fas fa-adjust"></i></a>
@@ -61,7 +73,7 @@
             <!-- Modals -->
             <section id="description" class="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span onclick='closeModal("description", 0)' class="close">&times;</span>
                     <h2>Master Liberato Del Plato</h2>
                     <p>VI Dan Aikikai of Italy and Aikikai Tokyo. He has been practising Aikido since 1974. Until 1982 he was a student of Master Guido Garbolino in Turin, with weekly lessons by Master Joji Fujimoto. From 1980 to 1982 he was manager and
                         teacher in the Hirakudo Barruero Academy Dojo in Moncalieri (To). Since 1982 he has been responsible and teacher in the Hirakudo Academy Dojo in Eboli. He perfects the practice of Aikido by participating in national and international
@@ -69,42 +81,25 @@
                     <img id="photo" src="./assets/images/hirakudo-dojo.jpg" alt="Hirakudo Dojo">
                 </div>
             </section>
-            <section id="map" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div id="render-map"></div>
-                </div>
-            </section>
-            <section id="calendar" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div id="render-calendar"></div>
-                </div>
-            </section>
             <section id="mail" class="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <form action="" method="post"></form>
+                    <span onclick='closeModal("mail", 1)' class="close">&times;</span>
                 </div>
             </section>
         </article>
         <aside class="container">
             <!-- fixed sidebar in laptop and desktop mode -->
             <section class="sidebar">
-                <a id="whoBtn" href="#"><i class="far fa-user"></i><span class="link-text">Who</span></a>
-                <a id="whereBtn" href="#"><i class="fas fa-map-marker-alt"></i><span class="link-text">Where</span></a>
-                <a id="whenBtn" href="#"><i class="far fa-calendar-alt"></i><span class="link-text">When</span></a>
-                <a id="howBtn" href="#"><i class="far fa-envelope"></i><span class="link-text">How</span></a>
+                <a onclick='openModal("description")' href="#"><i class="far fa-user"></i><span class="link-text">Who</span></a>
+                <a href="map.html"><i class="fas fa-map-marker-alt"></i><span class="link-text">Where</span></a>
+                <a href="#"><i class="far fa-calendar-alt"></i><span class="link-text">When</span></a>
+                <a onclick='openModal("mail")' href="#"><i class="far fa-envelope"></i><span class="link-text">How</span></a>
                 <a href="#" class="themify"><i class="fas fa-adjust"></i><span class="link-text">Switch</span></a>
             </section>
         </aside>
     </main>
     <!-- load my scripts -->
-    <script src="./assets/scripts/myscripts.js" type="text/javascript" defer></script>
-    <script src="./assets/scripts/map.js" type="text/javascript" defer></script>
-    <!-- load marker cluster script and google map API -->
-    <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrzg5c087fCIyJ9RkiZTspFr_rCOhze5U&callback=initMap" type="text/javascript"></script>
+    <script src="./assets/scripts/myscripts.js" defer></script>
 </body>
 
 </html>
