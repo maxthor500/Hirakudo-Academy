@@ -233,6 +233,7 @@ I would like to thank the following:
 
 * **CI Staff** and **Slack Community** for their assistance with minor coding issues.
 
+* My fiance, **Vanessa**, for his users stories.
 
 **The content of this website is for educational purposes only.**
 
