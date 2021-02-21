@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Roboto&display=swap');
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -27,7 +35,7 @@ nav {
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2.7rem;
     margin-left: 1rem;
 }
 
@@ -44,10 +52,7 @@ nav {
 
 .nav-item a {
     color: #242231;
-    font-size: 2rem;
-    padding: .3rem .8rem;
-    border-radius: .2rem;
-    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 .link-text {
@@ -57,6 +62,8 @@ nav {
 a:hover {
     background: none;
     color: #df2c2c;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -79,7 +86,7 @@ a:hover {
     display: block;
     top: 4rem;
     float: left;
-    width: 25%;
+    width: 10%;
     margin-right: 1.2rem;
     margin-top: 0;
     z-index: 1;
@@ -87,6 +94,8 @@ a:hover {
     height: 100vh;
     background: whitesmoke;
     left: -100%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -124,9 +133,7 @@ img.hero-image {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -145,6 +152,8 @@ img.hero-image {
     border: .1rem solid #242231;
     padding: 1rem;
     text-align: center;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
     transition-duration: 0.4s;
     overflow: hidden;
     text-transform: uppercase;
@@ -161,6 +170,8 @@ img.hero-image {
     margin-left: -20px;
     margin-top: -120%;
     opacity: 0;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
     transition: all 0.8s
 }
 
@@ -168,6 +179,8 @@ img.hero-image {
     padding: 0;
     margin: 0;
     opacity: 1;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
     transition: 0s
 }
 
@@ -184,7 +197,11 @@ img.hero-image {
     left: 0;
     width: 5rem;
     height: 100%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transition-property: left;
+    -o-transition-property: left;
     transition-property: left;
     overflow-y: auto;
     display: none;
@@ -198,9 +215,15 @@ img.hero-image {
     width: 100%;
     line-height: 3.75rem;
     padding-left: .5rem;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transition-property: background;
+    -o-transition-property: background;
     transition-property: background;
+    z-index: 1;
 }
 
 .sidebar a:hover {
@@ -238,14 +261,18 @@ img.hero-image {
     .navbar-nav {
         width: 12%;
     }
-    h1 {
-        font-size: 2rem;
-    }
 }
 
 @media screen and (min-width: 26.5em) {
     .navbar-nav {
-        display: 8%;
+        width: 8%;
+    }
+    .nav-item a {
+        font-size: 2rem;
+        padding: .3rem .8rem;
+    }
+    h1 {
+        font-size: 2rem;
     }
 }
 
@@ -258,6 +285,9 @@ img.hero-image {
     }
     .active {
         display: inline-block;
+    }
+    .map-container {
+        margin-left: 5rem;
     }
 }
 
@@ -284,11 +314,6 @@ nav.dark-mode {
     background: #242231;
 }
 
-.btn.dark-mode {
-    color: whitesmoke;
-    border: .1rem solid whitesmoke;
-}
-
 .btn:after.dark-mode {
     background: #242231;
 }
@@ -302,6 +327,15 @@ nav.dark-mode {
 }
 
 h1.dark-mode {
+    color: whitesmoke;
+}
+
+.modal-content.dark-mode {
+    background-color: #242231;
+    color: whitesmoke;
+}
+
+.close.dark-mode {
     color: whitesmoke;
 }
 
@@ -366,7 +400,6 @@ h1.dark-mode {
 #photo {
     width: 100%;
     max-width: 20rem;
-    height: auto;
     padding: .5rem;
 }
 
@@ -374,16 +407,7 @@ h1.dark-mode {
 /* style Map */
 
 #mapid {
-    min-height: 22rem;
+    min-height: 25rem;
     margin: .8rem;
-}
-
-.logo h1 {
-    font-size: 1.2rem;
-    color: #242231;
-    position: absolute;
-    display: inline-flex;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 1rem;
+    z-index: 0;
 }
