@@ -93,7 +93,7 @@ Date.prototype.myEvent = function() {
     const todayIndex = this.getDay();
     switch (todayIndex) {
         case 0:
-            "There is no event today";
+            this.myProp = "<h3>There is no event today</h3>";
             break;
         case 1:
             this.myProp = "<h3>Hirakudo Academy</h3><p>19:00 - 21:00</p>";
@@ -114,7 +114,7 @@ Date.prototype.myEvent = function() {
             this.myProp = "<h3>ASD Tusciania</h3><p>16:00 - 17:30</p>";
             break;
     }
-}
+};
 
 function drawEvent() {
     const d = new Date();
@@ -122,4 +122,4 @@ function drawEvent() {
     document.getElementById("event").innerHTML = d.myProp;
 }
 
-drawEvent()
+drawEvent();
