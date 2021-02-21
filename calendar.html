@@ -18,12 +18,26 @@
 
 <body>
     <header>
-        <!-- logo -->
-        <a class="logo" href="index.html"><img id="logo" src="./assets/images/accademia-hirakudo.svg" alt="Hirakudo Logo">
-            <h1>Hirakudo Academy</h1>
-        </a>
+        <nav>
+            <!-- button bar -->
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars sidebar-btn"></i>
+            </label>
+            <!-- logo -->
+            <a class="logo" href="index.html"><img id="logo" src="./assets/images/accademia-hirakudo.svg" alt="Hirakudo Logo"></a>
+            <!-- navbar to mobile and tablet mode -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="nav-item" id="themeButton">
+                    <a href="#" class="themify"><i class="fas fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <main class="container">
+    <main class="calendar-container">
         <section class="calendar">
             <div class="month">
                 <i class="fas fa-angle-left prev"></i>
@@ -56,8 +70,17 @@
                 </tbody>
             </table>
         </section>
+        <aside class="container">
+            <!-- fixed sidebar in laptop and desktop mode -->
+            <section class="sidebar">
+                <a href="index.html"><i class="fas fa-home"></i><span class="link-text">Home</span></a>
+                <a href="#" class="themify"><i class="fas fa-adjust"></i><span class="link-text">Switch</span></a>
+            </section>
+        </aside>
     </main>
+    <!-- load my scripts -->
     <script src="./assets/scripts/calendar.js" defer></script>
+    <script src="./assets/scripts/shortscripts.js" defer></script>
 </body>
 
 </html>
