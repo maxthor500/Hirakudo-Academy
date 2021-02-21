@@ -2,9 +2,9 @@
 
 **Code Institute - Milestone Project for Interactive Frontend Development**
 
-[View webpage in GitHub Pages]( https://github.com/maxthor500/Hirakudo-Academy)
+[View webpage in GitHub Pages](https://github.com/maxthor500/Hirakudo-Academy)
 
-![Multi Device Website Mockup](.\assets\mockup\multi-device-hirakudo.png)
+![Multi Device Website Mockup](./assets/mockup/multi-device-hirakudo.png)
 
 This project is the second Milestone Project that make up the Full Stack Developer course at the Code Institute.
 
