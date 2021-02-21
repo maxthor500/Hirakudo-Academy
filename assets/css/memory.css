@@ -54,9 +54,8 @@
 .memory-card {
     width: calc(25% - .625rem);
     height: calc(33.333% - .625rem);
-    margin: auto;
     position: relative;
-    margin: .313em;
+    margin: .3em;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
