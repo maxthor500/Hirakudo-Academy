@@ -11,10 +11,6 @@
     <title>Hirakudo Academy</title>
     <!-- fontawesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-    <!-- load Leaflet JS-->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -89,24 +85,21 @@
                     <section class="container">
                         <form id="contact-form">
                             <fieldset>
-                                <legend>Contact me</legend>
-                                <input type="hidden" name="contact_number">
-                                <div>
+                                <legend>Send Me a Request</legend>
+                                <div class="form-item">
                                     <label for="name">Name</label>
-                                    <input id="name" name="user_name" placeholder="Enter name" required>
+                                    <input class="form-input" id="name" name="user_name" placeholder="Enter name" required>
                                 </div>
-                                <div>
+                                <div class="form-item">
                                     <label for="email">Email address</label>
-                                    <input type="email" id="email" name="user_email" placeholder="Enter email" required />
+                                    <input class="form-input" type="email" id="email" name="user_email" placeholder="Enter email" required />
                                 </div>
-                                <div>
+                                <div class="form-item">
                                     <label for="textarea">Request</label>
-                                    <textarea id="textarea" name="info-request" rows="5" placeholder="Insert your request here" required></textarea>
+                                    <textarea class="form-input" id="textarea" name="info_request" rows="5" placeholder="Insert your request here" required></textarea>
                                 </div>
-                                <div>
-                                    <div>
-                                        <input type="submit" id="button" value="Send Email" />
-                                    </div>
+                                <div class="form-item">
+                                    <input type="submit" id="button" class="btn send-btn" value="Send Email" />
                                 </div>
                             </fieldset>
                         </form>
