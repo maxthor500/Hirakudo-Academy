@@ -411,3 +411,49 @@ h1.dark-mode {
     margin: .8rem;
     z-index: 0;
 }
+
+
+/* style form */
+
+#contact-form {
+    font-family: 'Merienda One', cursive;
+}
+
+fieldset {
+    padding: 0 1rem;
+}
+
+fieldset legend {
+    padding: 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-item label {
+    padding-top: .5rem;
+    width: 100%;
+    display: inline-block;
+}
+
+.form-item .form-input {
+    width: 100%;
+    padding: .5rem;
+}
+
+.form-item {
+    text-align: center;
+}
+
+.send-btn {
+    font-size: 1rem;
+    text-shadow: 0.02rem 0.02rem #df2c2c;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    margin: .5rem;
+}
+
+.send-btn.dark-mode {
+    background-color: whitesmoke;
+    text-shadow: 0.02rem 0.02rem #242231;
+    color: #df2c2c;
+}
